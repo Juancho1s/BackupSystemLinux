@@ -1,0 +1,51 @@
+<h1 class="font-mono text-5xl">{{title}}</h1>
+<p class="font-mono text-2xl">Welcome to {{title}}</p>
+
+<h1 class="text-2xl font-mono mb-4">Backup Selection</h1>
+<form
+  action="/submit"
+  method="post"
+  class="flex flex-col justify-center items-center font-mono"
+>
+  <div class="mb-4 flex items-center w-full space-x-5">
+    <div>
+      <label
+        for="dropdownDirectory"
+        class="block text-gray-700 font-bold mb-2"
+      >Select a Directory:</label>
+      <select
+        name="dropdownDirectory"
+        id="dropdownDirectory"
+        class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      >
+        <option value="/home/juan/Music">/home/juan/Music</option>
+        <option value="/home/juan/Pictures">/home/juan/Pictures</option>
+        <option value="/home/juan/Videos">/home/juan/Videos</option>
+      </select>
+    </div>
+
+    <p class="font-mono text-3xl">&</p>
+
+    <div>
+      <label
+        for="dropdownFrequency"
+        class="block text-gray-700 font-bold mb-2"
+      >Select a Frequency:</label>
+      <select
+        name="dropdownFrequency"
+        id="dropdownFrequency"
+        class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+      >
+        <option value="monthly">monthly</option>
+        <option value="weekly">weekly</option>
+        <option value="daily">daily</option>
+        <option value="hourly">hourly</option>
+        <option value="minutely">minutely</option>
+      </select>
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+  >Submit</button>
+</form>
